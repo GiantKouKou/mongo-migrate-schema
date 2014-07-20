@@ -14,6 +14,10 @@ module.exports.update = function (options) {
         throw new Error('Missing db uri for update')
     }
 
+    if (typeof options['folder'] === 'undefined') {
+        throw new Error('Missing folder for update');
+    }
+
     MongoClient.connect(options['dbUri'], function (err, db) {
         var versionCollection = db.collection("config_version");
         versionCollection.findOne(function (err, version) {
