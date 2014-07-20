@@ -53,11 +53,7 @@ module.exports.update = function (options) {
 
 executeUpgrades = function (db, upgrades) {
     if (typeof upgrades == 'undefined' || upgrades == null || upgrades.length == 0) {
-        return db.collection("config_version").update({}, {$set: {num: versionNumber}}, {upsert: true}, function (err) {
-            if (err) {
-                throw err;
-            }
-
+        return updateVersion(db, versionNumber, function () {
             db.close();
             console.info('Upgrade finished ...........');
         });
@@ -71,6 +67,18 @@ executeUpgrades = function (db, upgrades) {
             throw err;
         }
 
-        executeUpgrades(db, upgrades);
+        updateVersion(db, versionNumber, function () {
+            executeUpgrades(db, upgrades);
+        });
+    });
+};
+
+updateVersion = function (db, versionNumber, fn) {
+    db.collection("config_version").update({}, {$set: {num: versionNumber}}, {upsert: true}, function (err) {
+        if (err) {
+            throw err;
+        }
+
+        fn();
     });
 };
