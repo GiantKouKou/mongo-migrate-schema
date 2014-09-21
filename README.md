@@ -1,12 +1,12 @@
-# mongo-flyway
+# mongo-migrate-schema
 ## Description
 This plugin can be used to migrate your MongoDB schema.
 ## Notice
 In your app require the module
-<pre><code>var mongo-flyway = require('mongo-flyway');</code></pre>
+<pre><code>var mongo-migrate-schema = require('mongo-migrate-schema');</code></pre>
 And then call update function with options argument
 <pre><code>
-mongo-flyway.update({
+mongo-migrate-schema.update({
     dbUri:'mongodb://localhost:27017/test'
     folder:__dirname + '/db'
 });

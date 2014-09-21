@@ -1,12 +1,12 @@
 {
-    "name": "mongo-flyway",
-    "version": "0.0.3",
+    "name": "mongo-migrate-schema",
+    "version": "0.0.1",
     "description": "MongoDB migration tool",
     "private": false,
     "main": "index",
 
     "repository": {
-        "url": "https://github.com/GiantKouKou/mongo-flyway.git"
+        "url": "https://github.com/GiantKouKou/mongo-migrate-schema.git"
     },
 
     "dependencies": {
