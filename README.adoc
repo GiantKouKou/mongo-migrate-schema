@@ -1,0 +1,69 @@
+= mongo-migrate-schema
+
+== Description
+This plugin can be used to migrate your MongoDB schema.
+
+== Notice
+In your app require the module
+
+[source,js]
+----
+var mongo-migrate-schema = require('mongo-migrate-schema');
+----
+
+And then call update function with options argument
+[source,js]
+----
+mongo-migrate-schema.update({
+    dbUri:'mongodb://localhost:27017/test'
+    folder:__dirname + '/db'
+});
+----
+
+In the given folder, put your update files.
+
+Each file must be named following this pattern :
+
+[NOTE]
+====
+[number]_[desciption].js
+
+Example :
+
+001_add_creation_date_field_default_value_today.js
+====
+
+Each file must export a function called execute
+[source,js]
+----
+module.exports.execute = function (db, fn) {
+    fn();
+};
+----
+
+== General options
+
+=== Update options
+
+[cols="1,1,6"]
+|===
+|dbUri
+|String
+|Uri of your MongoDB instance with the database name
+
+|folder
+|String
+|Absolute path where are your update files
+|===
+
+=== Execute function parameters
+
+[cols="1,5"]
+|===
+|db
+|MongoDB connection
+
+|fn
+|Callback function to invoke at the end of the upgrade.
+Can take in parameter an Error if an error occurred.
+|===
