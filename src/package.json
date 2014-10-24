@@ -1,20 +1,28 @@
 {
-    "name": "mongo-migrate-schema",
-    "version": "0.0.1",
-    "description": "MongoDB migration tool",
-    "private": false,
-    "main": "index",
-
-    "repository": {
-        "url": "https://github.com/GiantKouKou/mongo-migrate-schema.git"
-    },
-
-    "dependencies": {
-        "mongodb": "1.4.7"
-    },
-
-    "engines": {
-        "node": "0.10.x",
-        "npm": "1.2.x"
-    }
+  "name": "mongo-migrate-schema",
+  "version": "0.0.1",
+  "description": "MongoDB migration tool",
+  "private": false,
+  "main": "index",
+  "repository": {
+    "url": "https://github.com/GiantKouKou/mongo-migrate-schema.git"
+  },
+  "dependencies": {
+    "mongodb": "1.4.7"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "bugs": {
+    "url": "https://github.com/GiantKouKou/mongo-migrate-schema/issues"
+  },
+  "homepage": "https://github.com/GiantKouKou/mongo-migrate-schema",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giant",
+  "email": "loic.mesieres@gmail.com",
+  "license": "ISC"
 }
