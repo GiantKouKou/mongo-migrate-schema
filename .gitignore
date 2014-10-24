@@ -1,1 +1,3 @@
-mongo-flyway.iml
+mongo-migrate-schema.iml
+*.log
+.idea
