@@ -1,6 +1,6 @@
 {
   "name": "mongo-migrate-schema",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "MongoDB migration tool",
   "private": false,
   "main": "index",
@@ -8,11 +8,10 @@
     "url": "https://github.com/GiantKouKou/mongo-migrate-schema.git"
   },
   "dependencies": {
-    "mongodb": "1.4.7"
+    "mongodb": "2.0.46"
   },
   "engines": {
-    "node": "0.10.x",
-    "npm": "1.2.x"
+    "node": "4.x"
   },
   "bugs": {
     "url": "https://github.com/GiantKouKou/mongo-migrate-schema/issues"
